@@ -21,22 +21,20 @@ The code is based on the iGrill code from Bjoernhoefer (https://github.com/bjoer
 - ls
 
 - sudo nano igrill.service
+```bash
+[Unit]
+Description=igrill MQTT service
+After=network.target
 
-	Create File or Edit File
-	sudo nano igrill.service
+[Service]
+Type=simple
+Restart=always
+RestartSec=2
+ExecStart=/usr/bin/python /opt/igrill/monitor_igrill_v2.py
 
-	[Unit]
-	Description=igrill MQTT service
-	After=network.target
-
-	[Service]
-	Type=simple
-	Restart=always
-	RestartSec=2
-	ExecStart=/usr/bin/python /opt/Igrill_Gateway/monitor_igrill_v2.py
-
-	[Install]
-	WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
+```
 
 - sudo systemctl daemon-reload && systemctl enable igrill && systemctl start igrill
 - sudo reboot
