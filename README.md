@@ -48,60 +48,59 @@ To add the sensors in Home Assistant ad the following to your `configuration.yam
 # Example configuration.yaml entry
 
 sensor:
-	- platform: mqtt  
-	  state_topic: garden/sensor/0002/igrill_gateway/probe1
-	  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe1"
-	  payload_available: "yes"
-	  payload_not_available: "no"
-	  value_template: "{{  value | round(1) }}"
-	  name: "Temperatuur Probe 1" 
-	  unit_of_measurement: "°C" 
-	  qos: 0
-	  entity_namespace: igrill  
+- platform: mqtt  
+  state_topic: garden/sensor/0002/igrill_gateway/probe1
+  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe1"
+  payload_available: "yes"
+  payload_not_available: "no"
+  value_template: "{{  value | round(1) }}"
+  name: "Temperatuur Probe 1" 
+  unit_of_measurement: "°C" 
+  qos: 0
+  entity_namespace: igrill  
 
-	- platform: mqtt  
-	  state_topic: garden/sensor/0002/igrill_gateway/probe2
-	  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe2"
-	  payload_available: "yes"
-	  payload_not_available: "no"
-	  value_template: "{{  value | round(1) }}"
-	  name: "Temperatuur Probe 2" 
-	  unit_of_measurement: "°C" 
-	  qos: 0
-	  entity_namespace: igrill  
+- platform: mqtt  
+  state_topic: garden/sensor/0002/igrill_gateway/probe2
+  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe2"
+  payload_available: "yes"
+  payload_not_available: "no"
+  value_template: "{{  value | round(1) }}"
+  name: "Temperatuur Probe 2" 
+  unit_of_measurement: "°C" 
+  qos: 0
+  entity_namespace: igrill  
 
-	- platform: mqtt  
-	  state_topic: garden/sensor/0002/igrill_gateway/probe3
-	  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe3"
-	  payload_available: "yes"
-	  payload_not_available: "no"
-	  value_template: "{{  value | round(1) }}"
-	  name: "Temperatuur Probe 3" 
-	  unit_of_measurement: "°C" 
-	  qos: 0
-	  entity_namespace: igrill  
+- platform: mqtt  
+  state_topic: garden/sensor/0002/igrill_gateway/probe3
+  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe3"
+  payload_available: "yes"
+  payload_not_available: "no"
+  value_template: "{{  value | round(1) }}"
+  name: "Temperatuur Probe 3" 
+  unit_of_measurement: "°C" 
+  qos: 0
+  entity_namespace: igrill  
 	  
-	- platform: mqtt  
-	  state_topic: garden/sensor/0002/igrill_gateway/probe4
-	  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe4"
-	  payload_available: "yes"
-	  payload_not_available: "no"
-	  value_template: "{{  value | round(1) }}"
-	  name: "Temperatuur Probe 4" 
-	  unit_of_measurement: "°C" 
-	  qos: 0
-	  entity_namespace: igrill  
+- platform: mqtt  
+  state_topic: garden/sensor/0002/igrill_gateway/probe4
+  availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe4"
+  payload_available: "yes"
+  payload_not_available: "no"
+  value_template: "{{  value | round(1) }}"
+  name: "Temperatuur Probe 4" 
+  unit_of_measurement: "°C" 
+  qos: 0
+  entity_namespace: igrill  
 	  
-	- platform: mqtt  
-	  state_topic: garden/sensor/0002/igrill_gateway/battery
-	  availability_topic: "garden/sensor/0002/igrill_gateway/igrill_connected"
-	  payload_available: "yes"
-	  payload_not_available: "no"  
-	  name: "Accu Spanning"
-	  unit_of_measurement: "%"
-	  device_class: battery
-	  value_template: "{{ value | round(0) }}"
-	  qos: 0  
-	  entity_namespace: igrill
+- platform: mqtt  
+  state_topic: garden/sensor/0002/igrill_gateway/battery
+  availability_topic: "garden/sensor/0002/igrill_gateway/igrill_connected"
+  payload_available: "yes"
+  payload_not_available: "no"  
+  name: "Accu Spanning"
+  unit_of_measurement: "%"
+  device_class: battery
+  value_template: "{{ value | round(0) }}"
+  qos: 0  
+  entity_namespace: igrill
 ```
-
