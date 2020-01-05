@@ -40,7 +40,7 @@ WantedBy=multi-user.target
 - sudo reboot
 
 ## Usage
-To add the sensors in Home Assistant ad the following to your `configuration.yaml` file:
+To add the sensors in Home Assistant add the following to your `configuration.yaml` file:
 
 ```yaml
 # Example configuration.yaml entry
