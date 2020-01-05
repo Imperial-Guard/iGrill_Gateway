@@ -80,7 +80,7 @@ sensor:
   unit_of_measurement: "°C" 
   qos: 0
   entity_namespace: igrill  
-	  
+
 - platform: mqtt  
   state_topic: garden/sensor/0002/igrill_gateway/probe4
   availability_topic: "garden/sensor/0002/igrill_gateway/availability_probe4"
@@ -91,7 +91,7 @@ sensor:
   unit_of_measurement: "°C" 
   qos: 0
   entity_namespace: igrill  
-	  
+
 - platform: mqtt  
   state_topic: garden/sensor/0002/igrill_gateway/battery
   availability_topic: "garden/sensor/0002/igrill_gateway/igrill_connected"
